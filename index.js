@@ -1,9 +1,7 @@
 var loaderUtils = require("loader-utils");
 
 module.exports = function(source) {
-	if(this.cacheable) {
-		this.cacheable();
-	}
+	if(this.cacheable) this.cacheable();
 
 	var query = loaderUtils.parseQuery(this.query);
 	var react = query.react || '';

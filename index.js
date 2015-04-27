@@ -17,6 +17,5 @@ module.exports = function(source) {
 	});
 	var amd = _.template(templates.amd);
 	var result = amd({values: _.map(_.values(conf), function(value) {return "'" + value + "'";}), react: query.react, keys: keys, comps: comps});
-	console.log(result);
 	return result;
 };
